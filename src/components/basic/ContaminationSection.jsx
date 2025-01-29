@@ -1,4 +1,5 @@
 import polution from "/polution.jpg"
+import { Link } from "react-router-dom"
 
 export default function ContaminationSection() {
     return (
@@ -33,8 +34,10 @@ export default function ContaminationSection() {
                             endured, even while protecting yourself with masks and sanitizer? Turns out, it's not your fault.
                         </p>
 
-                        <button className="bg-[#813bb7] text-white px-8 py-3 rounded-full hover:bg-[#813bb7]/90 transition-colors">
-                            Read more
+                        <button>
+                            <Link to="/about" className="bg-[#813bb7] text-white px-8 py-3 rounded-full hover:bg-[#813bb7]/90 transition-colors">
+                                Read more
+                            </Link>
                         </button>
                     </div>
                 </div>

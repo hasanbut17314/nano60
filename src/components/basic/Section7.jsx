@@ -2,6 +2,7 @@ import React from 'react'
 import pic from "/7.png"
 import partners from "/partners.jpg"
 import { Star } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Section7 = () => {
     return (
@@ -31,9 +32,9 @@ const Section7 = () => {
                         <h2 className="text-2xl font-bold mb-2">Every 6 Bottle Order Gets FREE Shipping!</h2>
                         <p className="text-gray-600">*96% of customers order 6 bottles (Our recommended option)</p>
                     </div>
-                    <button className="mt-4 md:mt-0 bg-[#813bb7] text-white px-8 py-3 rounded-full hover:bg-[#813bb7]/90 transition-colors">
+                    <Link to="/cart" className="mt-4 md:mt-0 bg-[#813bb7] text-white px-8 py-3 rounded-full hover:bg-[#813bb7]/90 transition-colors">
                         Order Now
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Stock Up Banner */}
@@ -41,9 +42,9 @@ const Section7 = () => {
                     <h2 className="text-2xl font-semibold text-white mb-4 md:mb-0">
                         Stock Up On Mu-60 For Your Family While Supplies Last
                     </h2>
-                    <button className="border-2 border-white text-white md:px-8 px-5 py-3 rounded-full hover:bg-white hover:text-[#6f4cce] transition-colors">
+                    <Link to="/cart" className="border-2 border-white text-white md:px-8 px-5 py-3 rounded-full hover:bg-white hover:text-[#6f4cce] transition-colors">
                         Order Now
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Reviews Banner */}

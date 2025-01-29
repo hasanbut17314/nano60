@@ -73,7 +73,7 @@ export default function Navbar() {
                             ))}
                         </ul>
                         <Link
-                            to="/order"
+                            to="/cart"
                             className="inline-flex items-center px-6 py-2.5 rounded-full text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200"
                         >
                             Order Now
@@ -108,7 +108,7 @@ export default function Navbar() {
                         ))}
                     </ul>
                     <Link
-                        to="/order"
+                        to="/cart"
                         className="block px-4 py-2 text-center text-white bg-purple-600 hover:bg-purple-700 rounded-md"
                     >
                         Order Now
