@@ -1,6 +1,8 @@
 import React from 'react'
 import polution from "/polution.jpg"
 import ComparisonSection from '../components/basic/ComparisonSection'
+import VaccineInfoSection from '../components/basic/VaccineInfoSection'
+import VaccineComparison from '../components/basic/VaccineComparison'
 
 const About = () => {
     return (
@@ -37,6 +39,27 @@ const About = () => {
 
             <div>
                 <ComparisonSection />
+            </div>
+
+            <div>
+                <VaccineInfoSection />
+            </div>
+
+            <div>
+                <VaccineComparison />
+            </div>
+
+            <div>
+                <h3 className='text-2xl sm:text-3xl text-center mb-4 font-bold'>Long Covid And Toxic Nanoparticles: What's The Connection?</h3>
+                <div className='space-y-3 mb-10'>
+                    <p>
+                        Do you know someone who had covid recently, or even months ago, who has been adversely affected by it? Maybe they are experiencing periods of extreme fatigue, or maybe their memory has suffered. Perhaps they have migraines or chest pain, or they have trouble sleeping or focusing on their work. Maybe all of these things are happening at once, and maybe this person is you?
+                    </p>
+                    <p>
+                        Researchers have compared the long-lasting effects of covid to nanoparticle poisoning, and have
+                        suggested that the molecular, cellular and systemic alterations caused by SARS-CoV-2 are well known to particle toxicologists, and present a striking similarity to the mechanisms of toxicity caused by nanomaterials. It has even been suggested that in the near future, recovered covid patients could still be in danger of developing pulmonary fibrosis, or permanent lung damage.10
+                    </p>
+                </div>
             </div>
 
         </div>
