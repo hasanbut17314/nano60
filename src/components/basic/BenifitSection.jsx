@@ -42,7 +42,7 @@ export default function BenefitsSection() {
     return (
         <div className="bg-[#efeafa] py-16 px-4 md:px-8">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
                     {/* Left Column - Features */}
                     <div className="relative">
                         <div className="flex flex-col gap-8">
@@ -62,7 +62,7 @@ export default function BenefitsSection() {
                     </div>
 
                     {/* Vertical Divider - Hidden on Mobile */}
-                    <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-300" />
+                    <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-400" />
 
                     {/* Right Column - Benefits */}
                     <div className="space-y-4">

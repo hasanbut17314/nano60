@@ -20,8 +20,8 @@ export default function NewsLetter() {
                     className="w-16 h-16"
                 />
                 <div>
-                    <h2 className="text-white text-2xl font-bold mb-1">Nanoparticle Detox Mail</h2>
-                    <p className="text-gray-300">Get the latest advances in protecting your family, directly to your inbox</p>
+                    <h2 className="text-white sm:text-2xl text-lg font-bold mb-1">Nanoparticle Detox Mail</h2>
+                    <p className="text-gray-300 sm:text-base text-sm">Get the latest advances in protecting your family, directly to your inbox</p>
                 </div>
             </div>
 

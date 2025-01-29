@@ -12,7 +12,7 @@ export default function Navbar() {
         { name: "FAQ", href: "/faq" },
     ]
     return (
-        <nav className="w-full">
+        <nav className="w-full bg-[#EDE8F9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
