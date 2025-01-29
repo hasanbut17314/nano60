@@ -4,13 +4,24 @@ import { useState } from "react"
 import logo from "/logo.png"
 
 export default function Navbar() {
+
     const [isOpen, setIsOpen] = useState(false)
     const navLinks = [
         { name: "Home", href: "/" },
+        { name: "Ingredients", href: "/#ingredients" },
+        { name: "FAQ", href: "/#faq" },
         { name: "About", href: "/about" },
-        { name: "Ingredients", href: "/ingredients" },
-        { name: "FAQ", href: "/faq" },
     ]
+
+    const handleSmoothScroll = (e, href) => {
+        e.preventDefault();
+        const targetId = href.split("#")[1];
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <nav className="w-full bg-[#EDE8F9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
@@ -42,12 +53,22 @@ export default function Navbar() {
                         <ul className="flex space-x-3">
                             {navLinks.map((link) => (
                                 <li key={link.name}>
-                                    <Link
-                                        to={link.href}
-                                        className="px-4 py-2 rounded-md"
-                                    >
-                                        {link.name}
-                                    </Link>
+                                    {link.href.startsWith("/#") ? (
+                                        <a
+                                            href={link.href}
+                                            onClick={(e) => handleSmoothScroll(e, link.href)}
+                                            className="px-4 py-2 rounded-md"
+                                        >
+                                            {link.name}
+                                        </a>
+                                    ) : (
+                                        <Link
+                                            to={link.href}
+                                            className="px-4 py-2 rounded-md"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -67,12 +88,22 @@ export default function Navbar() {
                     <ul className="flex flex-col items-center space-y-3 mb-3">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <Link
-                                    to={link.href}
-                                    className="px-4 py-2 rounded-md"
-                                >
-                                    {link.name}
-                                </Link>
+                                {link.href.startsWith("/#") ? (
+                                    <a
+                                        href={link.href}
+                                        onClick={(e) => handleSmoothScroll(e, link.href)}
+                                        className="px-4 py-2 rounded-md"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        to={link.href}
+                                        className="px-4 py-2 rounded-md"
+                                    >
+                                        {link.name}
+                                    </Link>
+                                )}
                             </li>
                         ))}
                     </ul>

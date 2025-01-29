@@ -59,7 +59,7 @@ export default function ProductDiagram() {
 
     return (
         <div className="bg-[#efeafa] min-h-screen md:px-8 px-4 py-12">
-            <div className="max-w-6xl mx-auto relative">
+            <div className="max-w-6xl mx-auto relative" id="ingredients">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <ProductCard {...products.avocadoOil} />
                     <ProductCard {...products.colloidalGold} />

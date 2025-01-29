@@ -32,7 +32,7 @@ const Home = () => {
             <section>
                 <Section7 />
             </section>
-            <section>
+            <section id='faq'>
                 <FAQSection />
             </section>
         </main>
