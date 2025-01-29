@@ -5,3 +5,7 @@ body {
 .heading span {
     color: #813BB7;
 }
+
+.heading {
+    line-height: 1.3;
+}
