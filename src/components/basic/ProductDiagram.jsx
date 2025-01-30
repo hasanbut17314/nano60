@@ -1,12 +1,12 @@
-import { ArrowLeft, ArrowRight } from "lucide-react"
 import hero from "/hero.png"
 import pic1 from "/diagram/1.png"
 import pic2 from "/diagram/2.png"
 import pic3 from "/diagram/3.png"
 import pic4 from "/diagram/4.png"
+import divider from "/line.png"
 
 const ProductCard = ({ title, subtitle, benefits, image }) => (
-    <div className="bg-white rounded-lg p-4 shadow-md">
+    <div className="bg-white rounded-lg p-4 shadow-md lg:max-w-sm">
         <img src={image || "/placeholder.svg"} alt={title} className="w-full h-48 object-contain mb-4" />
         <h3 className="font-bold text-lg">{title}</h3>
         <p className="text-gray-600 text-sm mb-3">{subtitle}</p>
@@ -58,9 +58,9 @@ export default function ProductDiagram() {
     }
 
     return (
-        <div className="bg-[#efeafa] min-h-screen md:px-8 px-4 py-12">
-            <div className="max-w-6xl mx-auto relative" id="ingredients">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="bg-[#efeafa] lg:min-h-screen md:px-8 px-4 py-12">
+            <div className=" mx-auto relative" id="ingredients">
+                <div className="flex md:flex-row flex-col lg:gap-0 gap-6 lg:justify-between justify-center mb-8">
                     <ProductCard {...products.avocadoOil} />
                     <ProductCard {...products.colloidalGold} />
                 </div>
@@ -74,24 +74,18 @@ export default function ProductDiagram() {
                     />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div className="flex md:flex-row flex-col lg:gap-0 gap-6 lg:justify-between justify-center mt-8">
                     <ProductCard {...products.shilajit} />
                     <ProductCard {...products.fullerenes} />
                 </div>
 
                 {/* Connecting Arrows */}
-                <div className="hidden md:block">
-                    <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2">
-                        <ArrowLeft className="text-[#6f4cce] w-12 h-12" />
+                <div className="hidden lg:block">
+                    <div className="absolute top-1/4 left-1/3 transform -translate-x-1/2">
+                        <img src={divider} alt="" />
                     </div>
-                    <div className="absolute top-1/3 right-1/2 transform translate-x-1/2">
-                        <ArrowRight className="text-[#6f4cce] w-12 h-12" />
-                    </div>
-                    <div className="absolute bottom-1/3 left-1/2 transform -translate-x-1/2">
-                        <ArrowLeft className="text-[#6f4cce] w-12 h-12" />
-                    </div>
-                    <div className="absolute bottom-1/3 right-1/2 transform translate-x-1/2">
-                        <ArrowRight className="text-[#6f4cce] w-12 h-12" />
+                    <div className="absolute top-1/4 right-1/3 transform translate-x-1/2">
+                        <img src={divider} className="scale-x-[-1]" alt="" />
                     </div>
                 </div>
             </div>
